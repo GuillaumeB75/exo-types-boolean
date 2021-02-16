@@ -1,6 +1,6 @@
 # table de vérité xor #
 
-**Table de vérité OR classique**:
+## Table de vérité OR classique ##
 
 | a | b | a OR b |
 |---|---|---------|

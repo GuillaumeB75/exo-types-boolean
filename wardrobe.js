@@ -1,18 +1,36 @@
-let isRainy = false
-let temperature = 17
-let clothes = ''
+let isRainy = true
+let isWindy = false
+let temperature = 10
+let clothes = 't-shirt, calçon, '
+let inCapdAgde = false
+let inSalleDeSport = true
+
 
 if (isRainy) {
-  clothes += 'umbrella, + leather boots, + hat,'
+  clothes += 'umbrella, ' // concatenation de string
 }
-else if (temperature < 15) {
-  clothes = 'pull-over, + scarf,'
+
+if (temperature < 15 || isWindy) {
+  clothes += 'coat, '
+  clothes += 'pantalon, '
+} else if (temperature >= 15 && temperature <= 20) {
+  clothes += 'sweater, '
+  clothes += 'pantalon, '
+} else if (temperature > 20 && temperature <= 30) {
+  clothes += 't-shirt, '
+  clothes += 'short'
+} else {
+  clothes += 'crème solaire, '
+  clothes += 'lunettes de soleil, '
+  clothes += 'chapeau, '
 }
-else if (temperature >= 15 && temperature <= 20) {
-  clothes = 'sweater, + tshirt, + shirt,'
+
+if (inSalleDeSport) {
+  clothes += 'chaussure de running, '
 }
-else if (temperature > 20) {
-  clothes = 't-shirt, + baggy'
+
+if (inCapdAgde) {
+  clothes = ''
 }
-else { }
+
 console.log(`Je vous recommande de porter: ${clothes}`)
